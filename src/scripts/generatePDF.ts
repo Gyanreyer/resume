@@ -17,9 +17,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  await page.goto("http://localhost:4173", {
-    timeout: 5000,
-  });
+  await page.goto("http://localhost:4173");
   // Ensure the page contents have been rendered before we proceed
   await page.waitForSelector("#resume", {
     timeout: 5000,
