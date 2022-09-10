@@ -1,7 +1,7 @@
 import playwright from "playwright";
 import path from "path";
 import { fileURLToPath } from "url";
-import { execSync, exec } from "child_process";
+import { exec } from "child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -17,7 +17,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  await page.goto("http://localhost:8080", {
+  await page.goto("http://localhost:4173", {
     timeout: 5000,
   });
   // Ensure the page contents have been rendered before we proceed

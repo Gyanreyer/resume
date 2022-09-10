@@ -10,14 +10,13 @@
     "generatePDF": "ts-node-esm ./src/scripts/generatePDF.ts"
   },
   "dependencies": {
-    "@types/node": "^18.7.14",
     "@vanilla-extract/css": "^1.7.3",
     "playwright": "^1.25.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "vite-plugin-ssr": "^0.4.32"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^18.7.16",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vanilla-extract/vite-plugin": "^3.4.0",
