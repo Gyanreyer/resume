@@ -1,12 +1,16 @@
 import playwright from "playwright";
+import waitPort from "wait-port";
 import path from "path";
 import { fileURLToPath } from "url";
-import { exec } from "child_process";
+import { execSync, exec } from "child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 (async () => {
-  // Start serving the built Resume page at localhost:8080 so we can open it in playwright
+  // Build the resume page with vite
+  execSync("npm run build");
+
+  // Start serving the built Resume page at localhost:4173 so we can open it in playwright
   // We'll hook it up to an AbortController so we can kill the server when we're done
   const serveResumePageController = new AbortController();
   exec("npm run preview", {
@@ -16,6 +20,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const browser = await playwright.chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
+
+  // Wait to make sure the port is open before we try to connect to it
+  await waitPort({
+    host: "localhost",
+    port: 4173,
+  });
 
   await page.goto("http://localhost:4173");
   // Ensure the page contents have been rendered before we proceed
