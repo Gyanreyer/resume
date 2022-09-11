@@ -1,20 +1,30 @@
 import { style, globalStyle, keyframes } from "@vanilla-extract/css";
 
-import { themeVars } from "./sharedStyles.css";
+import { mobileBreakpointMediaQuery, themeVars } from "./sharedStyles.css";
 
 export const main = style({
-  display: "flex",
-  gap: themeVars.spacing.gutter,
+  display: "grid",
+  gridTemplateColumns: "6fr 10fr",
+  columnGap: themeVars.spacing.gutter,
   padding: themeVars.spacing.gutter,
+  "@media": {
+    [mobileBreakpointMediaQuery]: {
+      gridTemplateColumns: "1fr",
+    },
+  },
 });
 
 export const sidebar = style({
   backgroundColor: themeVars.color.accentColor,
   padding: `2rem ${themeVars.spacing.gutter} 5rem`,
-  minWidth: "37%",
   height: `calc(100vh - 2 * ${themeVars.spacing.gutter})`,
   boxSizing: "border-box",
   position: "relative",
+  "@media": {
+    [mobileBreakpointMediaQuery]: {
+      height: "auto",
+    },
+  },
 });
 
 export const headline = style({
@@ -39,7 +49,12 @@ export const sidebarSectionParagraph = style({
 });
 
 export const mainArticle = style({
-  padding: `1rem ${themeVars.spacing.gutter} 0 0`,
+  padding: `1rem ${themeVars.spacing.gutter} 2rem 0`,
+  "@media": {
+    [mobileBreakpointMediaQuery]: {
+      paddingTop: "0",
+    },
+  },
 });
 
 globalStyle(`${mainArticle} h2`, {
@@ -73,6 +88,12 @@ export const downloadLink = style({
   "@media": {
     print: {
       display: "none",
+    },
+    [mobileBreakpointMediaQuery]: {
+      bottom: "unset",
+      left: "unset",
+      top: "0.25rem",
+      right: "0.25rem",
     },
   },
 });

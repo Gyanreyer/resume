@@ -13,6 +13,8 @@ export const themeVars = createGlobalTheme(":root", {
   },
 });
 
+export const mobileBreakpointMediaQuery = `screen and (max-width: 520px)`;
+
 globalStyle("html, body", {
   margin: 0,
   backgroundColor: themeVars.color.background,
@@ -37,11 +39,6 @@ globalStyle(":root", {
     "sans-serif",
   ],
   lineHeight: 1.2,
-  // "@media": {
-  //   print: {
-  //     fontSize: "12pt",
-  //   },
-  // },
 });
 
 globalStyle("h1, h2, h3, h4, h5, h6", {
