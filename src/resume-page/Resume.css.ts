@@ -16,7 +16,7 @@ export const main = style({
 
 export const sidebar = style({
   backgroundColor: themeVars.color.accentColor,
-  padding: `2rem ${themeVars.spacing.gutter} 5rem`,
+  padding: `2rem ${themeVars.spacing.gutter} 4rem`,
   height: `calc(100vh - 2 * ${themeVars.spacing.gutter})`,
   boxSizing: "border-box",
   position: "relative",
@@ -53,6 +53,7 @@ export const mainArticle = style({
   "@media": {
     [mobileBreakpointMediaQuery]: {
       paddingTop: "0",
+      paddingBottom: "4rem",
     },
   },
 });
@@ -90,10 +91,7 @@ export const downloadLink = style({
       display: "none",
     },
     [mobileBreakpointMediaQuery]: {
-      bottom: "unset",
-      left: "unset",
-      top: "0.25rem",
-      right: "0.25rem",
+      display: "none",
     },
   },
 });
