@@ -18,8 +18,8 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Generate PDF
-        run: npm run generatePDF
+      - name: Generate site and PDF
+        run: npm run generateStaticSiteAndPDF
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
