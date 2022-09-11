@@ -3,9 +3,10 @@ on:
   push:
     branches:
       - main
-    # Only run this action if a file in the src/ directory changed
+    # Only run this action if the site's index file or a file in the src/ directory changed
     paths:
       - "src/**"
+      - "index.html"
 
 permissions:
   contents: write
