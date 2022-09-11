@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+    # Only run this action if a file in the src/ directory changed
+    paths:
+      - "src/**"
 
 permissions:
   contents: write
