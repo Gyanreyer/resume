@@ -7,9 +7,6 @@ import { execSync, exec } from "child_process";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 (async () => {
-  // Build the resume page with vite
-  execSync("npm run build");
-
   // Start serving the built Resume page at localhost:4173 so we can open it in playwright
   // We'll hook it up to an AbortController so we can kill the server when we're done
   const serveResumePageController = new AbortController();
@@ -33,7 +30,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
     timeout: 5000,
   });
 
-  const outputFileName = `Ryan-Geyer-Resume-${new Date().toISOString()}.pdf`;
+  const outputFileName = `Ryan-Geyer-Resume.pdf`;
 
   await page.pdf({
     // The PDF will be 8.5 x 11 inches

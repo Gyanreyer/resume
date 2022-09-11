@@ -1,9 +1,10 @@
 import ExperienceEntry from "./ExperienceEntry";
+import SkillsList from "./SkillsList";
+import DownloadIcon from "./DownloadIcon";
 
 import * as styles from "./Resume.css";
-import SkillsList from "./SkillsList";
 
-function App() {
+export default function Resume() {
   return (
     <main className={styles.main} id="resume">
       <aside className={styles.sidebar}>
@@ -36,6 +37,14 @@ function App() {
             Graduated cum laude
           </em>
         </p>
+        <a
+          href="/Ryan-Geyer-Resume.pdf"
+          download="Ryan-Geyer-Resume.pdf"
+          title="Download PDF"
+          className={styles.downloadLink}
+        >
+          <DownloadIcon />
+        </a>
       </aside>
       <article className={styles.mainArticle}>
         <section>
@@ -85,5 +94,3 @@ function App() {
     </main>
   );
 }
-
-export default App;

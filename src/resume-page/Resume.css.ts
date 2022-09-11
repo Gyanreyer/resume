@@ -1,4 +1,4 @@
-import { style, globalStyle } from "@vanilla-extract/css";
+import { style, globalStyle, keyframes } from "@vanilla-extract/css";
 
 import { themeVars } from "./sharedStyles.css";
 
@@ -14,6 +14,7 @@ export const sidebar = style({
   minWidth: "37%",
   height: `calc(100vh - 2 * ${themeVars.spacing.gutter})`,
   boxSizing: "border-box",
+  position: "relative",
 });
 
 export const headline = style({
@@ -43,4 +44,41 @@ export const mainArticle = style({
 
 globalStyle(`${mainArticle} h2`, {
   color: themeVars.color.headingText,
+});
+
+const floatAnimation = keyframes({
+  "0%": {
+    transform: "translateY(0)",
+  },
+  "50%": {
+    transform: "translateY(-10%)",
+  },
+  "100%": {
+    transform: "translateY(0)",
+  },
+});
+
+export const downloadLink = style({
+  position: "absolute",
+  bottom: "0",
+  left: "0",
+  width: "2.5rem",
+  height: "2.5rem",
+  padding: "0.4rem",
+  color: themeVars.color.accentContrast,
+  textDecoration: "none",
+  ":hover": {
+    animation: `${floatAnimation} ease-in-out 2s infinite`,
+  },
+  "@media": {
+    print: {
+      display: "none",
+    },
+  },
+});
+
+globalStyle(`${downloadLink} svg`, {
+  fill: "currentcolor",
+  width: "100%",
+  height: "auto",
 });

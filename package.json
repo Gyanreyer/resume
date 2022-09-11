@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "generatePDF": "ts-node-esm ./src/scripts/generatePDF.ts"
+    "generatePDF": "npm run build && ts-node-esm ./src/scripts/generatePDF.ts"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.7.3",
