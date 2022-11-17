@@ -9,7 +9,7 @@ export default function Resume() {
     <main className={styles.main} id="resume">
       <aside className={styles.sidebar}>
         <h1 className={styles.headline}>ryan geyer</h1>
-        <h2 className={styles.subheadline}>creative web developer</h2>
+        <h2 className={styles.subheadline}>front-end engineer</h2>
         <h3 className={styles.sectionHeading}>skills</h3>
         <SkillsList
           skills={[
@@ -60,17 +60,24 @@ export default function Resume() {
         <section>
           <h2 className={styles.sectionHeading}>Experience</h2>
           <ExperienceEntry
-            title="Full-Stack Software Developer"
+            title="Lead Front-end Engineer"
             subtitle="Waymark, Detroit, MI · July 2018 - Present"
             summaryPoints={[
-              "Primarily work on the product team to build new features for the user-facing portion of the Waymark web app",
+              "Full-Stack Software Engineer from July 2018 - September 2022.",
+              [
+                "Promoted to lead Waymark's newly-formed front-end team, with added responsibilities of mentoring lower-level front-end engineers and guiding the site's front-end architecture",
+              ],
               "Led various initiatives to improve infrastructure, developer experience, and site performance",
               [
                 "Implemented progressive image loading to improve page load times",
-                "Started migrating the existing codebase to TypeScript",
-                "Researched and established new best practices for global state management",
+                "Led a major initiative to migrate Waymark's front-end codebase to TypeScript",
               ],
-              "Worked on several high value projects as the sole developer, including implementing a complete re-design of the site's video editor UI",
+              "Worked on several high value projects as the sole developer, including:",
+              [
+                "Executed on a full re-design of the Waymark video editor UI, which involved effectively rebuilding the entire editor from scratch",
+                "Built the Waymark template browser (waymark.com/templates)",
+                "Wrote a puppeteer web scraper which can extract relevant business images and colors from a website for use in video personalization",
+              ],
             ]}
             techStack={[
               "TypeScript, React.js, Apollo, Emotion (CSS-in-JS)",

@@ -28,16 +28,7 @@ globalStyle("body", {
 globalStyle(":root", {
   fontSize: "16px",
   color: themeVars.color.text,
-  fontFamily: [
-    // Just try to use the nicest available version of helvetica
-    "HelveticaNeue-Light",
-    "Helvetica Neue Light",
-    "Helvetica Neue",
-    "Helvetica",
-    "Arial",
-    "Lucida Grande",
-    "sans-serif",
-  ],
+  fontFamily: "sans-serif",
   lineHeight: 1.2,
 });
 
