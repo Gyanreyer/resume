@@ -64,19 +64,13 @@ export default function Resume() {
             subtitle="Waymark, Detroit, MI · July 2018 - Present"
             summaryPoints={[
               "Full-Stack Software Engineer from July 2018 - September 2022.",
-              [
-                "Promoted to lead Waymark's newly-formed front-end team, with added responsibilities of mentoring lower-level front-end engineers and guiding the site's front-end architecture",
-              ],
-              "Led various initiatives to improve infrastructure, developer experience, and site performance",
-              [
-                "Implemented progressive image loading to improve page load times",
-                "Led a major initiative to migrate Waymark's front-end codebase to TypeScript",
-              ],
+              ["Promoted to lead Waymark's newly-formed front-end team"],
+              "Led various initiatives to improve infrastructure, developer experience, accessibility, and site performance",
               "Worked on several high value projects as the sole developer, including:",
               [
-                "Executed on a full re-design of the Waymark video editor UI, which involved effectively rebuilding the entire editor from scratch",
-                "Built the Waymark template browser (waymark.com/templates)",
-                "Wrote a puppeteer web scraper which can extract relevant business images and colors from a website for use in video personalization",
+                "Executed on a full rebuild of the Waymark video editor UI from the ground up",
+                "Built out UIs for core Waymark template browser and AI video generator flows",
+                "Wrote a Puppeteer web scraper to extract relevant brand info from a website",
               ],
             ]}
             techStack={[
@@ -91,8 +85,9 @@ export default function Resume() {
             title="React Hover Video Player"
             subtitle="react-hover-video-player.dev · March 2020 - Present"
             summaryPoints={[
-              "An open source React component library for rendering videos that play on hover, including support for mouse and touch events and a simple API for adding thumbnails and loading states",
+              "An open source React component library for rendering video previews that play on hover",
               "Over 220,000 downloads via npm to date",
+              "Also maintain a vanilla web component version of the library",
             ]}
             techStack={["TypeScript, React.js, Playwright, Github Actions"]}
           />
