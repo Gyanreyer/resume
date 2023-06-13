@@ -80,7 +80,7 @@ export default function Resume() {
               ],
             ]}
             techStack={[
-              "TypeScript, React.js, Apollo, Emotion (CSS-in-JS)",
+              "TypeScript, React.js, Apollo, Vanilla Extract, Nx",
               "Python, Django, Graphene (GraphQL), PostgreSQL",
             ]}
           />
@@ -92,9 +92,9 @@ export default function Resume() {
             subtitle="react-hover-video-player.dev · March 2020 - Present"
             summaryPoints={[
               "An open source React component library for rendering videos that play on hover, including support for mouse and touch events and a simple API for adding thumbnails and loading states",
-              "Over 100,000 downloads via npm to date",
+              "Over 220,000 downloads via npm to date",
             ]}
-            techStack={["TypeScript, React.js, Cypress, CircleCI"]}
+            techStack={["TypeScript, React.js, Playwright, Github Actions"]}
           />
         </section>
       </article>
